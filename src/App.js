@@ -1,22 +1,26 @@
 import React, {Fragment} from 'react';
-import styled from "styled-components";
-import "./App.css"
+import styled, {createGlobalStyle} from "styled-components";
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    padding: 0;
+    margin: 0;
+  }
+`
 const App = () => {
   return (
     <Container>
+      <GlobalStyle/>
       <Button success>Hello</Button>
       <Button danger>Hello</Button>
     </Container>
   );
 }
-
 const Container = styled.div`
   height: 100vh;
   width: 100%;
   background-color: pink;
 `;
-
 const Button = styled.button`
   border-radius: 50px;
   padding: 5px;
@@ -33,3 +37,5 @@ const Button = styled.button`
 `;
 
 export default App;
+
+
