@@ -1,17 +1,26 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import styled from 'styled-components';
+
+const Contatiner = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 100px;
+`;
+
+
+const Title = styled.Text`
+  font-weight: 600;
+  font-size: 32px;
+`;
+
 
 const App = () => {
   return (
-    <>
-    </>
+    <Contatiner>
+      <Title>Open up App.js to start working on your app!</Title>
+    </Contatiner>
   );
 };
 
